@@ -4,7 +4,6 @@ module.exports = {
         filename: "bundle.js"
     },
     watch: true,
-
     module: {
         preLoaders: [
             {
@@ -15,9 +14,12 @@ module.exports = {
         ],
         loaders: [
             {
-                test: /\.es6&$/,
+                test: /\.es6$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: 'babel',
+                query: {
+                    presets: ['es2015']
+                }
             }
         ]
     },
