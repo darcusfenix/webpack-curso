@@ -1,4 +1,7 @@
-require("./login");
+//require("./login");
+import {login} from "./login";
+
+login("sad", "ewdas");
 
 document.write("hola mundo");
 
